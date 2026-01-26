@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #76126a; }
+        .container { width: 50%; margin: 80px auto; background: #fff; padding: 30px; border-radius: 8px; text-align: center; }
+        input { width: 80%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 30px; background-color: #18a2b8; color: #fff; border: none; cursor: pointer; }
+    </style>
+    <script src="/validation.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration Form</h1>
+        <form action="/register" method="post" onsubmit="return validatePassword()">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <br><br>
+            <button type="submit">Register</button>
+        </form>
+
+        <a href="/login" style="display:inline-block; margin-top:15px; padding: 10px 25px; background:#18a2b8; color:white; text-decoration:none; border-radius:5px;">
+            Already Registered? Login
+        </a>
+    </div>
+</body>
+</html>
